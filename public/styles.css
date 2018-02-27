@@ -4,10 +4,9 @@
 * {
 	margin:0;
 	box-sizing:border-box;
-	background-color:rgb(235, 235, 225);
 }
 
-body 	{font-family: 'Yantramanav', sans-serif;}
+body 	{font-family: 'Yantramanav', Arial;}
 
 
 /* SECTION STYLES
@@ -18,30 +17,65 @@ body 	{font-family: 'Yantramanav', sans-serif;}
 #container {
 	margin:1.5rem 3rem;
 	display:grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 4fr;
 	grid-column-gap:2px;
 	box-shadow:0px 0px 30px #888888;
 	border-radius:20px 20px 20px 20px;
 }
 
-/* ------------ Main Container ---------------------- */
+/* ------------ Main Info ---------------------- */
 
-#main_info {background-color:white; border-radius:0px 20px 20px 0px;}
+#main-info {border-radius:0px 20px 20px 0px;}
 
-/* ------------ Side Nav Menu ---------------------- */
+/* ------------ Side Navbar ---------------------- */
 
-#sidebar {
+#navbar {
 	background-image:linear-gradient(
 					 to right bottom, 
 					 rgba(187,7,7,.75), 
 					 rgba(249,100,0,.75)
 	);
 	border-radius:20px 0px 0px 20px;
+	height:93vh;
+	position:relative;
 }
 
+.navbar_portrait {
+	position:relative;
+	display:block;
+	margin:2rem auto;
+	border-radius:75px;
+	height:150px;
+	box-shadow:0px 0px 20px black;
+}
 
+.navbar_description {
+	color:white; 
+	text-align:center; 
+	letter-spacing:3px;
+}
 
+.navbar_description-main 	{font-size:1.25rem; font-weight:400;}
+.navbar_description-sub 	{font-size:1rem; font-weight:300;}
 
+.navbar_menu 	{text-align:center; margin-top:2rem;}
+.navbar_menu ul {list-style-type:none; padding:0;}
+
+.navbar_menu a {
+	display:block;
+	font-weight:300;
+	font-size:1.2rem;
+	letter-spacing:2px;
+	text-decoration:none;
+	color:white;
+	padding:.5rem 0;
+}
+
+.navbar_menu a:hover {
+	border-bottom:2px solid silver;
+}
+
+.navbar_contact-info {text-align:center; margin-top:2rem;color:white;}
 
 /* MOBILE RESPONSIVENESS
 ============================================================================= */
