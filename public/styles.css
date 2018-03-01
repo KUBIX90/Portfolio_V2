@@ -15,22 +15,38 @@ body 	{font-family: 'Yantramanav', Arial;}
 /* ------------ Main Container ---------------------- */
 
 #container {
-	margin:1.5rem 3rem;
 	display:grid;
 	grid-template-columns: 1fr 4fr;
-	box-shadow:0px 0px 30px #888888;
-	border-radius:20px 20px 20px 20px;
 }
 
 /* ------------ Main Info ---------------------- */
 
 #main-info {
-	border-radius:0px 20px 20px 0px;
-	background:linear-gradient(
-				rgba(255, 255, 255, .8),
-				rgba(255, 255, 255, .8)),
-			    url(images/landing-page.jpg); 
+	background-image: url(images/landing-page2.jpg); 
 	background-size:cover;
+}
+
+.main-info_text-box {
+	text-align:center;
+	position:relative;
+    top:40%;
+    transform:translateY(-50%);
+	letter-spacing:8px;
+}	
+
+.main-info_header {
+	font-size:4.5rem;
+	font-weight:300;
+	margin:0;
+}
+
+.main-info_header-sub{
+	font-weight:300;
+}
+
+.main-info_header--text-style {
+	color:silver;
+	text-transform:uppercase;
 }
 
 /* ------------ Side Navbar ---------------------- */
@@ -38,17 +54,16 @@ body 	{font-family: 'Yantramanav', Arial;}
 #navbar {
 	background-image:linear-gradient(
 					 to right bottom, 
-					 rgba(187,7,7,.75), 
-					 rgba(249,100,0,.75)
+					 rgb(1,1,1), 
+					 rgba(32,3,32,.90)
 	);
-	border-radius:20px 0px 0px 20px;
-	height:93vh;
+	height:100vh;
 	text-align:center;
 }
 
 .navbar_portrait {
 	display:block;
-	margin:2rem auto;
+	margin:3.5rem auto 2rem auto;
 	border-radius:75px;
 	height:150px;
 	box-shadow:0px 0px 20px black;
@@ -85,9 +100,9 @@ body 	{font-family: 'Yantramanav', Arial;}
 	margin-bottom:.5rem;
 }
 
-.navbar_icon--style 	{
+.navbar_icon--style {
 	font-size:2rem; 
-	color:rgba(57, 57, 57, .7); 
+	color:rgba(170, 170, 170, .7);
 	padding:0 .15rem;
 	transition:color 300ms ease-out;
 }
