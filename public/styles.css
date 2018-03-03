@@ -8,28 +8,44 @@
 
 body 	{font-family: 'Yantramanav', Arial;}
 
-
 /* SECTION STYLES
 ============================================================================= */
 
-/* ------------ Main Container ---------------------- */
+/* ------------ Menu-icon ---------------------- */
 
-#container {
-	display:grid;
-	grid-template-columns: 1fr 4fr;
+.container_menu-icon {
+	position:absolute;
+	left:30px;
+	top:30px;
+	height:48px;
+	width:48px;
+	border:1px solid white;
+	border-radius:24px;
+	
+}
+
+.bar-1, .bar-2, .bar-3 {
+	position:relative;
+	top:8%;
+	height:1px;
+	width:25px;
+	background-color:white;
+	border:1px white solid;
+	margin:8px auto;
 }
 
 /* ------------ Main Info ---------------------- */
 
-#main-info {
-	background-image: url(images/landing-page2.jpg); 
+.main-info {
+	background-image: url(images/landing-page.jpg); 
 	background-size:cover;
+	height:100vh;
 }
 
 .main-info_text-box {
 	text-align:center;
 	position:relative;
-    top:40%;
+    top:45%;
     transform:translateY(-50%);
 	letter-spacing:8px;
 }	
@@ -51,15 +67,25 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 /* ------------ Side Navbar ---------------------- */
 
-#navbar {
+.navbar {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20%;
 	background-image:linear-gradient(
 					 to right bottom, 
 					 rgb(1,1,1), 
-					 rgba(32,3,32,.90)
+					 rgba(32,3,32,.70)
 	);
+	padding:.2rem;
 	height:100vh;
 	text-align:center;
+	z-index:200;
+	transform:translateX(-100%);
+	transition:all 1s ease-out;
 }
+
+.navbar--translate	{transform:translateX(0%);}
 
 .navbar_portrait {
 	display:block;
@@ -68,7 +94,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	height:150px;
 	box-shadow:0px 0px 20px black;
 }
-
 
 .navbar_description {
 	color:white; 
