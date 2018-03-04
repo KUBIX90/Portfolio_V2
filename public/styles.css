@@ -19,9 +19,14 @@ body 	{font-family: 'Yantramanav', Arial;}
 	top:30px;
 	height:48px;
 	width:48px;
-	border:1px solid white;
+	border:1px solid transparent;
 	border-radius:24px;
-	
+	cursor:pointer;
+	transition:all 500ms ease-in;
+}
+
+.container_menu-icon:hover {
+	border:1px solid white;
 }
 
 .bar-1, .bar-2, .bar-3 {
@@ -85,7 +90,21 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition:all 1s ease-out;
 }
 
-.navbar--translate	{transform:translateX(0%);}
+.navbar--translate			{transform:translateX(0%);}
+
+.navbar_menu-close 			{cursor:pointer;}
+
+.navbar_menu-close--top 	{transform:rotate(45deg);}
+.navbar_menu-close--bottom  {transform:rotate(135deg);}
+
+.navbar_menu-close--style {
+	position:absolute;
+	top:15px;
+	right:10px;
+	height:2px;
+	width:20px;
+	background-color:white;
+}
 
 .navbar_portrait {
 	display:block;
@@ -128,7 +147,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 .navbar_icon--style {
 	font-size:2rem; 
 	color:rgba(170, 170, 170, .7);
-	padding:0 .15rem;
 	transition:color 300ms ease-out;
 }
 
@@ -142,4 +160,3 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 /* ANIMATIONS
 ============================================================================= */
-
