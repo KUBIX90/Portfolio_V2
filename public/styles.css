@@ -79,8 +79,8 @@ body 	{font-family: 'Yantramanav', Arial;}
 	width:20%;
 	background-image:linear-gradient(
 					 to right bottom, 
-					 rgb(1,1,1), 
-					 rgba(32,3,32,.70)
+					 rgb(1, 1, 1), 
+					 rgba(32, 3, 32,.70)
 	);
 	padding:.2rem;
 	height:100vh;
@@ -89,11 +89,9 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transform:translateX(-100%);
 	transition:all 1s ease-out;
 }
-
 .navbar--translate			{transform:translateX(0%);}
 
 .navbar_menu-close 			{cursor:pointer;}
-
 .navbar_menu-close--top 	{transform:rotate(45deg);}
 .navbar_menu-close--bottom  {transform:rotate(135deg);}
 
@@ -150,12 +148,69 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition:color 300ms ease-out;
 }
 
+/* ------------ Portfolio page ---------------------- */
+
+.container_portfolio {
+	height:100vh;
+	position:relative;
+	z-index:100;
+	width:100%;
+}
+
+.container_portfolio--layout {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(350px, auto);
+}
+
+.container_portfolio-image {
+	backgroud-size:cover;
+	background-position:center;
+	transition:all 1s ease-in;
+}
+
+.container_portfolio-image--overlay {
+	height:100%;
+	width:100%;
+	background-color:rgba(0, 0, 0, .5);
+	opacity:0;
+	transition: all 1s ease;
+}
+
+.container_portfolio-image--overlay:hover {
+	opacity:1;
+}
+
+
+
+
+
+
+.container_portfolio-quote-machine		{background-image:url(images/quote-machine.jpg);}
+.container_portfolio-weather-machine	{background-image:url(images/weather-machine.jpg);}
+.container_portfolio-wikipedia-app		{background-image:url(images/wikipedia-app.jpg);}
+.container_portfolio-twitch-app			{background-image:url(images/twitch-app.jpg);}
+
+
+
+
+.container_portfolio-tbc	{
+	background-color:grey;
+}
+
+.container_portfolio-title	{
+	color:white;
+	text-align:center;
+	font-weight:300;
+	position:relative;
+    top:45%;
+    transform:translateY(-50%);
+}
+
 /* MOBILE RESPONSIVENESS
 ============================================================================= */
 
 .navbar_icon--style:hover {color:rgb(57, 57, 57);}
-
-
 
 
 /* ANIMATIONS
