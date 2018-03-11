@@ -157,6 +157,12 @@ body 	{font-family: 'Yantramanav', Arial;}
 	width:100%;
 }
 
+.container_portfolio-hide {
+	opacity:0;
+	visibility:hidden;
+	overflow:hidden;
+}
+
 .container_portfolio--layout {
 	display:grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -166,45 +172,65 @@ body 	{font-family: 'Yantramanav', Arial;}
 .container_portfolio-image {
 	backgroud-size:cover;
 	background-position:center;
-	transition:all 1s ease-in;
+	cursor:pointer;
 }
 
-.container_portfolio-image--overlay {
+.container_portfolio-image--overlay,
+.container_portfolio-TBC--overlay {
 	height:100%;
-	width:100%;
-	background-color:rgba(0, 0, 0, .5);
-	opacity:0;
+	background-color:rgba(0, 0, 0, .75);
+	opacity:1;
 	transition: all 1s ease;
 }
 
-.container_portfolio-image--overlay:hover {
+.container_portfolio-image--overlay:hover .container_portfolio-information {
+	background-color:rgba(0, 0, 0, .75);
+}
+.container_portfolio-image--overlay:hover {background-color:transparent;}
+.container_portfolio-image--overlay:hover .container_portfolio-text, .container_portfolio-icon {
 	opacity:1;
+	visibility:visible;
 }
 
+.container_portfolio-information {
+	color:white;
+	height:30%;
+	position:relative;
+	top:70%;
+	padding:0 .5rem;
+	overflow:hidden;
+	transition: all 250ms ease-in;
+}
 
+.container_portfolio-title {
+	font-weight:400; 
+	border-bottom:1px solid silver;
+	padding:.2rem 0;
+	letter-spacing:1px;
+}
 
+.container_portfolio-text {
+	font-weight:300;
+	padding:.25rem 0;
+	transition:all 200ms ease-in;
+	overflow:hidden;
+	letter-spacing:1px;
+}
 
-
+.container_portfolio-icon	{
+	font-size:1.2rem;
+	transition:all 200ms ease-in;
+	overflow:hidden;
+}
 
 .container_portfolio-quote-machine		{background-image:url(images/quote-machine.jpg);}
 .container_portfolio-weather-machine	{background-image:url(images/weather-machine.jpg);}
 .container_portfolio-wikipedia-app		{background-image:url(images/wikipedia-app.jpg);}
 .container_portfolio-twitch-app			{background-image:url(images/twitch-app.jpg);}
 
-
-
-
 .container_portfolio-tbc	{
 	background-color:grey;
-}
-
-.container_portfolio-title	{
-	color:white;
-	text-align:center;
-	font-weight:300;
-	position:relative;
-    top:45%;
-    transform:translateY(-50%);
+	color:transparent;
 }
 
 /* MOBILE RESPONSIVENESS
