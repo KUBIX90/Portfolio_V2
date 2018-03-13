@@ -8,6 +8,8 @@
 
 body 	{font-family: 'Yantramanav', Arial;}
 
+
+
 /* SECTION STYLES
 ============================================================================= */
 
@@ -85,7 +87,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	padding:.2rem;
 	height:100vh;
 	text-align:center;
-	z-index:200;
+	z-index:10;
 	transform:translateX(-100%);
 	transition:all 1s ease-out;
 }
@@ -152,16 +154,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 .container_portfolio {
 	height:100vh;
-	position:relative;
-	z-index:100;
-	width:100%;
 	border-top:2px grey solid;
-}
-
-.container_portfolio-hide {
-	opacity:0;
-	visibility:hidden;
-	overflow:hidden;
 }
 
 .container_portfolio--layout {
@@ -179,7 +172,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 .container_portfolio-image--overlay,
 .container_portfolio-TBC--overlay {
 	height:100%;
-	background-color:rgba(0, 0, 0, .75);
+	background-color:rgba(0, 0, 0, .65);
 	opacity:1;
 	transition: all 1s ease;
 }
@@ -218,6 +211,12 @@ body 	{font-family: 'Yantramanav', Arial;}
 	letter-spacing:1px;
 }
 
+.container_portfolio-text--hide {
+	opacity:0;
+	visibility:hidden;
+	overflow:hidden;
+}
+
 .container_portfolio-icon	{
 	font-size:1.2rem;
 	transition:all 200ms ease-in;
@@ -229,9 +228,98 @@ body 	{font-family: 'Yantramanav', Arial;}
 .container_portfolio-wikipedia-app		{background-image:url(images/wikipedia-app.jpg);}
 .container_portfolio-twitch-app			{background-image:url(images/twitch-app.jpg);}
 
-.container_portfolio-tbc	{
+.container_portfolio-tbc {
 	background-color:grey;
 	color:transparent;
+}
+
+/* ------------ Modal ---------------------- */
+
+.modal {
+	position:fixed;
+	z-index:50;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	overflow:auto;
+	background:rgba(0, 0, 0, .75);
+	transition:all 900ms ease-out;
+	opacity:0;
+	visibility:hidden;
+	transition:all 1s ease-out;
+}
+
+.modal-content {
+	background-color:rgba(255, 255, 255, .85);
+	position:relative;
+	z-index:100;
+	margin:0 auto;
+	max-width:40%;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	padding:.5rem;
+	border-radius:2px;
+	animation:showModal 1s;
+	display:none;
+}
+
+.modal-content_heading {
+	font-weight:400;
+	font-size:1.5rem;
+	margin-bottom:.5rem;
+	display:block;
+	letter-spacing:1px;
+	clear:both;
+}
+
+.modal-content_text {
+	line-height:1.2rem;
+	margin-bottom:1.5rem;
+}
+
+.modal-content_link-container {
+	display:block;
+	margin-bottom:.75rem;
+}
+
+.modal-content_link {
+	text-decoration:none;
+	background-color:#4c4ca6;
+	padding:.25rem;
+	color:white;
+	font-weight:300;
+	margin-right:.5rem;
+	transition:all 250ms ease;
+}
+
+.modal-content_link:hover {
+	background-color:#262653;
+}
+
+.modal-content_close {
+	position:absolute;
+	color:black;
+	top:5%;
+	right:5%;
+	font-size:2rem;
+	cursor:pointer;
+	transition:color 250ms ease;
+}
+
+.modal-content_close:hover {
+	color:black;
+}
+
+h4 {
+	background-color:silver;
+	float:left;
+	margin-right:5px;
+	padding:5px;
+	border-radius:2px;
+	font-weight:300;
+	margin-bottom:.75rem;
 }
 
 /* MOBILE RESPONSIVENESS
@@ -242,3 +330,15 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 /* ANIMATIONS
 ============================================================================= */
+
+@keyframes showModal {
+	0%{transform:translateY(-300%);}
+	80%{transform:translateY(-40%);}
+	100%{transform:translateY(-50%);}
+}
+
+@keyframes removeModal {
+	0%{transform:translateY(-50%);}
+	20%{transform:translateY(-40%);}
+	100%{transform:translateY(-300%);}
+}
