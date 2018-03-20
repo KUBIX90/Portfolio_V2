@@ -142,41 +142,37 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 /* --- Portfolio page --- */
 
-.container_portfolio {
-	height:100vh;
-	border-top:2px grey solid;
-}
+#portfolio 	{height:100vh; border-top:2px grey solid;}
 
-.container_portfolio--layout {
+#portfolio .grid-layout {
 	display:grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: minmax(350px, auto);
 }
 
-.container_portfolio-image {
+#portfolio .project_image {
 	backgroud-size:cover;
 	background-position:center;
 	cursor:pointer;
 }
 
-.container_portfolio-image--overlay,
-.container_portfolio-TBC--overlay {
+#portfolio .project_image-overlay,
+#portfolio .TBC_overlay {
 	height:100%;
 	background-color:rgba(0, 0, 0, .65);
 	opacity:1;
 	transition: all 1s ease;
 }
 
-.container_portfolio-image--overlay:hover .container_portfolio-information {
-	background-color:rgba(0, 0, 0, .75);
-}
-.container_portfolio-image--overlay:hover {background-color:transparent;}
-.container_portfolio-image--overlay:hover .container_portfolio-text, .container_portfolio-icon {
+#portfolio .project_image-overlay:hover  {background-color:transparent;}
+
+#portfolio .project_image-overlay:hover .project_information {background-color:rgba(0, 0, 0, .75);}
+#portfolio .project_image-overlay:hover .project_text, .project_image-overlay {
 	opacity:1;
 	visibility:visible;
 }
 
-.container_portfolio-information {
+#portfolio .project_information {
 	color:white;
 	height:30%;
 	position:relative;
@@ -186,14 +182,14 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition: all 250ms ease-in;
 }
 
-.container_portfolio-title {
+#portfolio .project_title {
 	font-weight:400; 
 	border-bottom:1px solid silver;
 	padding:.2rem 0;
 	letter-spacing:1px;
 }
 
-.container_portfolio-text {
+#portfolio .project_text {
 	font-weight:300;
 	padding:.25rem 0;
 	transition:all 200ms ease-in;
@@ -201,31 +197,21 @@ body 	{font-family: 'Yantramanav', Arial;}
 	letter-spacing:1px;
 }
 
-.container_portfolio-text--hide {
+#portfolio .project_text--hide {
 	opacity:0;
 	visibility:hidden;
 	overflow:hidden;
 }
 
-.container_portfolio-icon	{
+#portfolio .project_icon	{
 	font-size:1.2rem;
 	transition:all 200ms ease-in;
 	overflow:hidden;
 }
 
-.container_portfolio-quote-machine		{background-image:url(images/quote-machine.jpg);}
-.container_portfolio-weather-machine	{background-image:url(images/weather-machine.jpg);}
-.container_portfolio-wikipedia-app		{background-image:url(images/wikipedia-app.jpg);}
-.container_portfolio-twitch-app			{background-image:url(images/twitch-app.jpg);}
+/* --- Modals --- */
 
-.container_portfolio-tbc {
-	background-color:grey;
-	color:transparent;
-}
-
-/* ------------ Modal ---------------------- */
-
-.modal {
+#modals {
 	position:fixed;
 	z-index:50;
 	left:0;
@@ -240,7 +226,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition:all 1s ease-out;
 }
 
-.modal-content {
+#modals .content {
 	background-color:rgba(255, 255, 255, .85);
 	position:relative;
 	z-index:100;
@@ -253,7 +239,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	border-radius:2px;
 }
 
-.modal-content_heading {
+#modals .heading {
 	font-weight:400;
 	font-size:1.5rem;
 	margin-bottom:.5rem;
@@ -262,17 +248,17 @@ body 	{font-family: 'Yantramanav', Arial;}
 	clear:both;
 }
 
-.modal-content_text {
+#modals .modal_text {
 	line-height:1.2rem;
 	margin-bottom:1.5rem;
 }
 
-.modal-content_link-container {
+#modals .modal_link-container {
 	display:block;
 	margin-bottom:.75rem;
 }
 
-.modal-content_link {
+#modals .modal_link {
 	text-decoration:none;
 	background-color:#4c4ca6;
 	padding:.25rem;
@@ -282,11 +268,11 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition:all 250ms ease;
 }
 
-.modal-content_link:hover {
+#modals .modal_link:hover {
 	background-color:#262653;
 }
 
-.modal-content_close {
+#modals .modal_close-content {
 	position:absolute;
 	color:black;
 	top:5%;
@@ -296,7 +282,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition:color 250ms ease;
 }
 
-.modal-content_close:hover {
+#modals .modal_close-content:hover {
 	color:black;
 }
 

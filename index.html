@@ -11,8 +11,6 @@
 	<title>Mark Kubik - Front-end Web Developer</title>
 </head>
 <body>
-
-<section id = "container">
 		
 		<div id = "menu-icon">
 			<div class = "bar-1"></div>
@@ -29,7 +27,7 @@
 		
 		<aside id = "navbar">
 
-				<span class = "close">&times;</span>
+			<span class = "close">&times;</span>
 			
 			<figure>
 				<img class = "portrait"
@@ -70,92 +68,98 @@
 			</article>
 	</aside>
 	
-	<section class = "container_portfolio">
+	<section id = "portfolio">
 		
-		<article class = "container_portfolio--layout">
-			<div id = "portfolio_quote-machine" 
-				 class = "container_portfolio-quote-machine
-						  container_portfolio-image">	  
-				<div class = "container_portfolio-image--overlay">
-						<div class = "container_portfolio-information">
-							<h2 class = "container_portfolio-title">Quote Machine</h2>
-							<p class = "container_portfolio-text container_portfolio-text--hide">A web app, powered using a web API, that generates random quotes upon clicking</p>
-							<figure class = "container_portfolio-icon">
+		<section class = "grid-layout">
+		
+			<article id = "portfolio_quote-machine" 
+					 style = "background-image:url('public/images/quote-machine.jpg')"
+					 class = "project_image">	  
+				<div class = "project_image-overlay">
+					<div class = "project_information">
+						<h2 class = "project_title">Quote Machine</h2>
+							<p class = "project_text project_text--hide">A web app, powered using a web API, that generates random quotes upon clicking</p>
+							<figure class = "project_icon">
 								<i class = "ion-social-html5-outline"></i>
 								<i class = "ion-social-javascript-outline"></i>
 								<i class = "ion-social-css3-outline"></i>
 							</figure>
+					</div>
+				</div>
+			</article>
+			
+			<article id = "portfolio_weather-machine" 
+					 style = "background-image:url('public/images/weather-machine.jpg')"
+					 class = "project_image">	  
+				<div class = "project_image-overlay">
+					<div class = "project_information">
+						<h2 class = "project_title">Weather Machine</h2>
+							<p class = "project_text project_text--hide">A web application, powered using a web API, that provides weather information</p>
+							<figure class = "project_icon">
+								<i class = "ion-social-html5-outline"></i>
+								<i class = "ion-social-javascript-outline"></i>
+								<i class = "ion-social-css3-outline"></i>
+							</figure>
+					</div>
+				</div>
+			</article>
+			
+			<article id = "portfolio_wikipedia-app" 
+					 style = "background-image:url('public/images/wikipedia-app.jpg')"
+					 class = "project_image">	  
+				<div class = "project_image-overlay">
+					<div class = "project_information">
+						<h2 class = "project_title">Wikipedia App</h2>
+							<p class = "project_text project_text--hide">
+								A web application, powered using the Wikipedia API, that generates search results based on search inputs</p>
+							<figure class = "project_icon">
+								<i class = "ion-social-html5-outline"></i>
+								<i class = "ion-social-javascript-outline"></i>
+								<i class = "ion-social-css3-outline"></i>
+							</figure>
+					</div>
+				</div>
+			</article>
+			
+			<article id = "portfolio_twitch-app" 
+					 style = "background-image:url('public/images/twitch-app.jpg')"
+					 class = "project_image">	  
+				<div class = "project_image-overlay">
+					<div class = "project_information">
+						<h2 class = "project_title">Twitch App</h2>
+							<p class = "project_text project_text--hide">
+								A web application, powered using the Twitch API, which provides information and links to various channels</p>
+							<figure class = "project_icon">
+								<i class = "ion-social-html5-outline"></i>
+								<i class = "ion-social-javascript-outline"></i>
+								<i class = "ion-social-css3-outline"></i>
+							</figure>
+					</div>
+				</div>
+			</article>
+			
+			<div id = "portfolio_TBC" 
+				 class = "container_portfolio-image">
+				<div class = "TBC_overlay">
+						<div class = "project_information">
+							<h2 class = "project_title">TBC</h2>
 						</div>
+				</div>
+			</div>
+			<div id = "portfolio_TBC" 
+				 class = "container_portfolio-image">
+				<div class = "TBC_overlay">
+					<div class = "project_information">
+						<h2 class = "project_title">TBC</h2>
+					</div>
 				</div>
 			</div>
 			
-			<div id = "portfolio_weather-machine" 
-				 class = "container_portfolio-weather-machine
-						  container_portfolio-image">
-				<div class = "container_portfolio-image--overlay">
-						<div class = "container_portfolio-information">
-							<h2 class = "container_portfolio-title">Weather Machine</h2>
-							<p class = "container_portfolio-text container_portfolio-text--hide">A web application, powered using a web API, that provides weather information</p>
-							<figure class = "container_portfolio-icon">
-								<i class = "ion-social-html5-outline"></i>
-								<i class = "ion-social-javascript-outline"></i>
-								<i class = "ion-social-css3-outline"></i>
-							</figure>
-						</div>
-				</div>
-			</div>
-			<div id = "portfolio_wikipedia-app" 
-				 class = "container_portfolio-wikipedia-app
-						  container_portfolio-image">
-				<div class = "container_portfolio-image--overlay">
-						<div class = "container_portfolio-information">
-							<h2 class = "container_portfolio-title">Wikipedia App</h2>
-							<p class = "container_portfolio-text container_portfolio-text--hide">
-								A web application, powered using the wikipedia API, that generates search results based on search inputs</p>
-							<figure class = "container_portfolio-icon">
-								<i class = "ion-social-html5-outline"></i>
-								<i class = "ion-social-javascript-outline"></i>
-								<i class = "ion-social-css3-outline"></i>
-							</figure>
-						</div>
-				</div>
-			</div>
-			<div id = "portfolio_twitch-app" 
-				 class = "container_portfolio-twitch-app
-						  container_portfolio-image">
-				<div class = "container_portfolio-image--overlay">
-						<div class = "container_portfolio-information">
-							<h2 class = "container_portfolio-title">Twitch TV App</h2>
-							<p class = "container_portfolio-text container_portfolio-text--hide">A web application, powered using the twitch API, which provides information and links to various channels</p>
-							<figure class = "container_portfolio-icon">
-								<i class = "ion-social-html5-outline"></i>
-								<i class = "ion-social-javascript-outline"></i>
-								<i class = "ion-social-css3-outline"></i>
-							</figure>
-						</div>
-				</div>
-			</div>
-			<div id = "portfolio_TBC" 
-				 class = "container_portfolio-image">
-				<div class = "container_portfolio-TBC--overlay">
-						<div class = "container_portfolio-information">
-							<h2 class = "container_portfolio-title">TBC</h2>
-						</div>
-				</div>
-			</div>
-			<div id = "portfolio_TBC" 
-				 class = "container_portfolio-image">
-				<div class = "container_portfolio-TBC--overlay">
-						<div class = "container_portfolio-information">
-							<h2 class = "container_portfolio-title">TBC</h2>
-						</div>
-				</div>
-			</div>
-		</article>	
+		</section>	
 
-		<section class = "modal">
-			<article class = "modal-content">
-					<h3 class = "modal-content_heading">Skills</h3>
+		<section id = "modals">
+			<article class = "content">
+					<h3 class = "heading">Skills</h3>
 					
 						<h4>HTML5</h4>
 						<h4>CSS</h4>
@@ -165,28 +169,27 @@
 						<h4>Ajax</h4>
 						<h4>BEM</h4>
 					
-					<h3 class = "modal-content_heading">Scope</h3>
-						<p class="modal-content_text">
+					<h3 class = "heading">Scope</h3>
+						<p class="modal_text">
 							The web app was constructed using HTML5, using the BEM methodology where applicable to name selectors.
 							An AJAX call to the Wikipedia API is made using jQuery when inputting search results, 
 							which then returns the relevant information from Wikipedia.
 						</p>
-					<div class = "modal-content_link-container">
-						<a class = "modal-content_link" 
+					<div class = "modal_link-container">
+						<a class = "modal_link" 
 						   target = "_blank" 
 						   href = "https://github.com/KUBIX90/wikipedia-viewer">
 						GitHub Repository</a>
 						
-						<a class = "modal-content_link" 
+						<a class = "modal_link" 
 						   target = "_blank" 
 						   href = "https://kubix90.github.io/wikipedia-viewer/">
 						GitHub Page</a>
 					</div>
-					<span class="modal-content_close">&times;</span>
+					<span class="modal_close-content">&times;</span>
 			</article>
 		</section>
 			  
-	</section>
 </section>
 
 	<script src="public/App.js">
