@@ -74,26 +74,30 @@
 		
 			<article id = "portfolio_quote-machine" 
 					 style = "background-image:url('public/images/quote-machine.jpg')"
-					 class = "project_image">	  
-				<div class = "project_image-overlay">
-					<div class = "project_information">
-						<h2 class = "project_title">Quote Machine</h2>
-							<p class = "project_text project_text--hide">A web app, powered using a web API, that generates random quotes upon clicking</p>
-							<figure class = "project_icon">
-								<i class = "ion-social-html5-outline"></i>
-								<i class = "ion-social-javascript-outline"></i>
-								<i class = "ion-social-css3-outline"></i>
-							</figure>
+					 href = "#quote-machine"
+					 class = "project_image">
+				<a href="#quote-machine" class = "modal-link">					 
+					<div class = "project_image-overlay">
+						<div class = "project_information">
+							<h2 class = "project_title">Quote Machine</h2>
+								<p class = "project_text project_text--hide">A web app, powered using a web API, that generates random quotes upon clicking</p>
+								<figure class = "project_icon">
+									<i class = "ion-social-html5-outline"></i>
+									<i class = "ion-social-javascript-outline"></i>
+									<i class = "ion-social-css3-outline"></i>
+								</figure>
+						</div>
 					</div>
-				</div>
+				</a>
 			</article>
 			
-			<article id = "portfolio_weather-machine" 
-					 style = "background-image:url('public/images/weather-machine.jpg')"
+			<article id = "portfolio_weather-app" 
+					 style = "background-image:url('public/images/weather-app.jpg')"
+					 href = "#weather-app"
 					 class = "project_image">	  
 				<div class = "project_image-overlay">
 					<div class = "project_information">
-						<h2 class = "project_title">Weather Machine</h2>
+						<h2 class = "project_title">Weather App</h2>
 							<p class = "project_text project_text--hide">A web application, powered using a web API, that provides weather information</p>
 							<figure class = "project_icon">
 								<i class = "ion-social-html5-outline"></i>
@@ -106,6 +110,7 @@
 			
 			<article id = "portfolio_wikipedia-app" 
 					 style = "background-image:url('public/images/wikipedia-app.jpg')"
+					 href = "#wikipedia-app"
 					 class = "project_image">	  
 				<div class = "project_image-overlay">
 					<div class = "project_information">
@@ -123,6 +128,7 @@
 			
 			<article id = "portfolio_twitch-app" 
 					 style = "background-image:url('public/images/twitch-app.jpg')"
+					 href = "#twitch-app"
 					 class = "project_image">	  
 				<div class = "project_image-overlay">
 					<div class = "project_information">
@@ -158,12 +164,76 @@
 		</section>	
 
 		<section id = "modals">
-			<article class = "content">
+			<article id = "quote-machine"
+					 class = "content">
 					<h3 class = "heading">Skills</h3>
 					
 						<h4>HTML5</h4>
 						<h4>CSS</h4>
 						<h4>JavaScript</h4>
+						<h4>API's</h4>
+						<h4>Ajax</h4>
+					
+					<h3 class = "heading">Scope</h3>
+						<p class="modal_text">
+							A web application, powered using an API, that generates random quotes upon clicking. 
+							An Ajax function is used to access the API and generate quotes. 
+							Twitter functionality has also been added, allowing quotes to be added to tweets upon clicking a button.
+						</p>
+					<div class = "modal_link-container">
+						<a class = "modal_link" 
+						   target = "_blank"
+						   rel = ”noopener”
+						   href = "https://github.com/KUBIX90/random-quote-machine">
+						GitHub Repository</a>
+						
+						<a class = "modal_link" 
+						   target = "_blank"
+						   rel = ”noopener”
+						   href = "https://kubix90.github.io/random-quote-machine/">
+						GitHub Page</a>
+					</div>
+					<span class="modal_close-content">&times;</span>
+			</article>
+			<article id = "weather-app"
+					 class = "content">
+					<h3 class = "heading">Skills</h3>
+					
+						<h4>HTML5</h4>
+						<h4>CSS</h4>
+						<h4>JavaScript</h4>
+						<h4>API's</h4>
+						<h4>Ajax</h4>
+						<h4>BEM</h4>
+					
+					<h3 class = "heading">Scope</h3>
+						<p class="modal_text">
+							Using both the free code camp weather API and vanilla JS, 
+							I parsed the relevant local or city weather information to the browser interface using multiple calls to the API. 
+							A button to toggle the temperature in both Fahrenheit and Celsius has also been implemented, and the CSS has been styled
+							using the BEM methodology.
+						</p>
+					<div class = "modal_link-container">
+						<a class = "modal_link" 
+						   target = "_blank"
+						   rel = ”noopener”
+						   href = "https://github.com/KUBIX90/weather-app">
+						GitHub Repository</a>
+						
+						<a class = "modal_link" 
+						   rel = ”noopener”
+						   target = "_blank" 
+						   href = "https://kubix90.github.io/weather-app/">
+						GitHub Page</a>
+					</div>
+					<span class="modal_close-content">&times;</span>
+			</article>
+			<article id = "wikipedia-app"
+					 class = "content">
+					<h3 class = "heading">Skills</h3>
+					
+						<h4>HTML5</h4>
+						<h4>CSS</h4>
 						<h4>jQuery</h4>
 						<h4>API's</h4>
 						<h4>Ajax</h4>
@@ -171,19 +241,52 @@
 					
 					<h3 class = "heading">Scope</h3>
 						<p class="modal_text">
-							The web app was constructed using HTML5, using the BEM methodology where applicable to name selectors.
+							The web app was constructed using HTML5, using the BEM methodology where applicable to name selectors. 
 							An AJAX call to the Wikipedia API is made using jQuery when inputting search results, 
 							which then returns the relevant information from Wikipedia.
 						</p>
 					<div class = "modal_link-container">
 						<a class = "modal_link" 
-						   target = "_blank" 
-						   href = "https://github.com/KUBIX90/wikipedia-viewer">
+						   target = "_blank"
+						   rel = ”noopener”						   
+						   href = "https://github.com/KUBIX90/wikipedia-app">
 						GitHub Repository</a>
 						
 						<a class = "modal_link" 
 						   target = "_blank" 
-						   href = "https://kubix90.github.io/wikipedia-viewer/">
+						   rel = ”noopener”
+						   href = "https://kubix90.github.io/wikipedia-app/">
+						GitHub Page</a>
+					</div>
+					<span class="modal_close-content">&times;</span>
+			</article>
+			<article id = "twitch-app"
+					 class = "content">
+					<h3 class = "heading">Skills</h3>
+					
+						<h4>HTML5</h4>
+						<h4>CSS</h4>
+						<h4>jQuery</h4>
+						<h4>API's</h4>
+						<h4>Ajax</h4>
+					
+					<h3 class = "heading">Scope</h3>
+						<p class="modal_text">
+							A web app that uses jQuery to make multiple API calls to the Twitch API.
+							The data is then used to show various information about the selected channels, such as followers and their current online status.
+							Search bar functionality has also been added allowing the user to search the channels based on each input.
+						</p>
+					<div class = "modal_link-container">
+						<a class = "modal_link" 
+						   target = "_blank"
+						   rel = ”noopener”
+						   href = "https://github.com/KUBIX90/twitch-app">
+						GitHub Repository</a>
+						
+						<a class = "modal_link" 
+						   target = "_blank"
+						   rel = ”noopener”
+						   href = "https://kubix90.github.io/twitch-app/">
 						GitHub Page</a>
 					</div>
 					<span class="modal_close-content">&times;</span>
