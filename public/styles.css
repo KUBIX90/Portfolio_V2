@@ -1,11 +1,7 @@
 /* BASE STYLES
 ============================================================================= */
 
-* {
-	margin:0;
-	box-sizing:border-box;
-}
-
+* 		{margin:0; box-sizing:border-box;}
 body 	{font-family: 'Yantramanav', Arial;}
 
 /* SECTION STYLES
@@ -24,8 +20,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	cursor:pointer;
 	transition:all 500ms ease-in;
 }
-
-#menu-icon:hover {border:1px solid white;}
 
 #menu-icon .bar-1, .bar-2, .bar-3 {
 	position:relative;
@@ -48,7 +42,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 #main-info .text-box {
 	text-align:center;
 	position:relative;
-	width:50%;
+	width:100%;
 	margin:0 auto;
     top:45%;
     transform:translateY(-50%);
@@ -172,14 +166,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition: all 1s ease;
 }
 
-#portfolio .project_image-overlay:hover  {background-color:transparent;}
-
-#portfolio .project_image-overlay:hover .project_information {background-color:rgba(0, 0, 0, .75);}
-#portfolio .project_image-overlay:hover .project_text, .project_image-overlay {
-	opacity:1;
-	visibility:visible;
-}
-
 #portfolio .project_information {
 	color:white;
 	height:30%;
@@ -255,8 +241,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	animation:showModal 1s;
 }
 
-
-
 #modals .heading {
 	font-weight:400;
 	font-size:1.5rem;
@@ -285,10 +269,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	transition:all 250ms ease;
 }
 
-#modals .modal_link:hover {
-	background-color:#262653;
-}
-
 #modals .modal_close-content {
 	position:absolute;
 	color:grey;
@@ -298,15 +278,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	cursor:pointer;
 	transition:color 250ms ease;
 	text-decoration:none;
-}
-
-#modals .modal_close-content:target .content {
-	transform:translateY(-250%);
-	animation:showModal 1s reverse;
-}
-
-#modals .modal_close-content:hover {
-	color:black;
 }
 
 h4 {
@@ -322,7 +293,84 @@ h4 {
 /* MOBILE RESPONSIVENESS
 ============================================================================= */
 
-#navbar .icon:hover {color:rgb(57, 57, 57);}
+@media only screen and (max-width: 1250px) {
+	/* --- Portfolio --- */
+	
+	#portfolio .project_text {font-size:.8rem;}
+}
+
+@media only screen and (max-width: 900px) {
+	/* --- Main-info --- */
+	
+	#main-info .text-box 	{top:50%;}
+	#main-info .header 		{font-size:4rem;}
+	#main-info .sub-header 	{font-size:1rem;}
+	
+	/* --- Portfolio --- */
+	
+	#portfolio .grid-layout 		{grid-template-columns: repeat(2, 1fr);}
+	#portfolio .project_text--hide {
+		opacity:1;
+		visibility:visible;
+		overflow:hidden;
+	}
+	
+	/* --- Navbar --- */
+	
+	#navbar 						{height:200px; width:100%;}
+	
+	#navbar .menu					{margin-top:1rem;}
+	#navbar .portrait 				{display:none;}
+	#navbar .description .title		{font-size:1rem;}
+	#navbar .description .skills	{font-size:.8rem;}
+	#navbar .contact-info .text 	{display:none;}
+	#navbar .menu a 				{font-size:1rem;}
+	
+	#navbar .icon {
+		position:relative;
+		bottom:25px;
+		font-size:1.75rem; 
+		margin-right:.25rem;
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+	/* --- Portfolio --- */
+	
+	#portfolio .grid-layout 	{grid-template-columns: repeat(1, 1fr);}
+	#main-info .header 			{font-size:2.8rem;}
+	#portfolio .project_text 	{font-size:.8rem;}
+}
+
+
+
+@media only screen and (min-width: 900px) {
+	/* --- Menu-icon --- */
+
+	#menu-icon:hover 		{border:1px solid white;}
+
+	/* --- Navbar --- */
+
+	#navbar .icon:hover 	{color:rgb(57, 57, 57);}
+
+	/* --- Portfolio --- */
+
+	#portfolio .project_image-overlay:hover {background-color:transparent;}
+	
+	#portfolio .project_image-overlay:hover .project_information {
+		background-color:rgba(0, 0, 0, .75);
+	}
+	#portfolio .project_image-overlay:hover .project_text, .project_image-overlay {
+		opacity:1;
+		visibility:visible;
+	}
+
+	/* --- Modals --- */
+
+	#modals .modal_link:hover 			{background-color:#262653;}
+	#modals .modal_close-content:hover 	{color:black;}
+}
 
 
 /* ANIMATIONS
@@ -332,20 +380,4 @@ h4 {
 	0%{transform:translateY(-250%);}
 	80%{transform:translateY(-40%);}
 	100%{transform:translateY(-50%);}
-}
-
-@keyframes removeModal {
-	0%{transform:translateY(-50%);}
-	20%{transform:translateY(-40%);}
-	100%{transform:translateY(-300%);}
-}
-
-@keyframes showHeader {
-	0%{transform:translateX(20%); opacity:0;}
-	100%{transform:translateX(0%); opacity:1;}
-}
-
-@keyframes showSubHeader {
-	0%{transform:translateY(30%); opacity:0;}
-	100%{transform:translateY(0%); opacity:1;}
 }
