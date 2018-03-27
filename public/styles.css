@@ -127,6 +127,11 @@ body 	{font-family: 'Yantramanav', Arial;}
 	margin-bottom:.5rem;
 }
 
+#navbar .contact-info figure a {
+	text-decoration:none;
+	margin-right:.2rem;
+}
+
 #navbar .icon {
 	font-size:2rem; 
 	color:rgba(170, 170, 170, .7);
@@ -330,7 +335,6 @@ h4 {
 		position:relative;
 		bottom:25px;
 		font-size:1.75rem; 
-		margin-right:.25rem;
 	}
 	
 	/* --- Modals --- */
