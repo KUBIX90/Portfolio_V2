@@ -136,7 +136,13 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 /* --- Portfolio page --- */
 
-#portfolio 	{height:100vh; border-top:2px grey solid;}
+#portfolio 	{
+	height:100vh; 
+	border-top:2px grey solid;	
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(350px, auto);
+}
 
 #portfolio .modal-link {
 	position:relative;
@@ -144,12 +150,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 	width:100%;
 	display:block;
 	text-decoration:none;
-}
-
-#portfolio .grid-layout {
-	display:grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: minmax(350px, auto);
 }
 
 #portfolio .project_image {
@@ -272,8 +272,8 @@ body 	{font-family: 'Yantramanav', Arial;}
 #modals .modal_close-content {
 	position:absolute;
 	color:grey;
-	top:5%;
-	right:5%;
+	top:5px;
+	right:10px;
 	font-size:2rem;
 	cursor:pointer;
 	transition:color 250ms ease;
@@ -308,7 +308,7 @@ h4 {
 	
 	/* --- Portfolio --- */
 	
-	#portfolio .grid-layout 		{grid-template-columns: repeat(2, 1fr);}
+	#portfolio 	{grid-template-columns: repeat(2, 1fr);}
 	#portfolio .project_text--hide {
 		opacity:1;
 		visibility:visible;
@@ -332,18 +332,27 @@ h4 {
 		font-size:1.75rem; 
 		margin-right:.25rem;
 	}
+	
+	/* --- Modals --- */
+	
+	#modals .content {
+		min-width:50%;
+	}
 }
-
 
 @media only screen and (max-width: 600px) {
 	/* --- Portfolio --- */
 	
-	#portfolio .grid-layout 	{grid-template-columns: repeat(1, 1fr);}
+	#portfolio				 	{grid-template-columns: repeat(1, 1fr);}
 	#main-info .header 			{font-size:2.8rem;}
 	#portfolio .project_text 	{font-size:.8rem;}
+	
+	/* --- Modals --- */
+	
+	#modals .content {
+		min-width:90%;
+	}
 }
-
-
 
 @media only screen and (min-width: 900px) {
 	/* --- Menu-icon --- */
@@ -357,10 +366,8 @@ h4 {
 	/* --- Portfolio --- */
 
 	#portfolio .project_image-overlay:hover {background-color:transparent;}
+	#portfolio .project_image-overlay:hover .project_information {background-color:rgba(0, 0, 0, .75);}
 	
-	#portfolio .project_image-overlay:hover .project_information {
-		background-color:rgba(0, 0, 0, .75);
-	}
 	#portfolio .project_image-overlay:hover .project_text, .project_image-overlay {
 		opacity:1;
 		visibility:visible;
@@ -371,7 +378,6 @@ h4 {
 	#modals .modal_link:hover 			{background-color:#262653;}
 	#modals .modal_close-content:hover 	{color:black;}
 }
-
 
 /* ANIMATIONS
 ============================================================================= */
