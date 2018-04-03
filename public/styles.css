@@ -42,7 +42,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 #main-info .text-box {
 	text-align:center;
 	position:relative;
-	width:100%;
+	width:60%;
 	margin:0 auto;
     top:45%;
     transform:translateY(-50%);
@@ -55,12 +55,16 @@ body 	{font-family: 'Yantramanav', Arial;}
 	font-size:4.5rem;
 	font-weight:300;
 	margin:0;
-	animation:showHeader 3s;
+	animation:showHeader 2s;
+	animation-delay:1s;
+	animation-fill-mode:backwards;
 }
 
 #main-info .sub-header{
 	font-weight:300;
-	animation:showSubHeader 3.5s;
+	animation:showSubHeader 2.5s;
+	animation-delay:1s;
+	animation-fill-mode:backwards;
 }
 
 /* --- Side Navbar --- */
@@ -82,7 +86,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	font-weight:400;
 	z-index:10;
 	transform:translateX(-100%);
-	transition:all 1s ease-out;
+	transition:all 500ms ease;
 }
 
 #navbar .portrait {
@@ -307,7 +311,7 @@ h4 {
 @media only screen and (max-width: 900px) {
 	/* --- Main-info --- */
 	
-	#main-info .text-box 	{top:50%;}
+	#main-info .text-box 	{top:50%; width:80%;}
 	#main-info .header 		{font-size:4rem;}
 	#main-info .sub-header 	{font-size:1rem;}
 	
