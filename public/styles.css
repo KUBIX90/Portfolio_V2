@@ -56,14 +56,14 @@ body 	{font-family: 'Yantramanav', Arial;}
 	font-weight:300;
 	margin:0;
 	animation:showHeader 2s;
-	animation-delay:1s;
+	animation-delay:1.25s;
 	animation-fill-mode:backwards;
 }
 
 #main-info .sub-header{
 	font-weight:300;
 	animation:showSubHeader 2.5s;
-	animation-delay:1s;
+	animation-delay:1.25s;
 	animation-fill-mode:backwards;
 }
 
@@ -86,7 +86,8 @@ body 	{font-family: 'Yantramanav', Arial;}
 	font-weight:400;
 	z-index:10;
 	transform:translateX(-100%);
-	transition:all 500ms ease;
+	transition:transform 500ms ease;
+	opacity:0;
 }
 
 #navbar .portrait {
@@ -108,7 +109,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 }
 
 #navbar .description 			{letter-spacing:3px;}
-#navbar .description .title		{font-size:1.25rem; font-weight:400;}
+#navbar .description .title		{font-size:1.25rem; font-weight:400; margin-bottom:.5rem;}
 #navbar .description .skills	{font-size:1rem; font-weight:300;}
 
 #navbar .menu 		{margin-top:2rem;}
@@ -128,7 +129,9 @@ body 	{font-family: 'Yantramanav', Arial;}
 	font-weight:400; 
 	letter-spacing:2px; 
 	font-size:.85rem; 
-	margin-bottom:.5rem;
+	border-bottom: 2px dashed white;
+	padding-bottom:.75rem;
+	margin:0 2rem .75rem 2rem;
 }
 
 #navbar .contact-info figure a {
@@ -162,7 +165,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 }
 
 #portfolio .project_image {
-	backgroud-size:cover;
 	background-position:center;
 	cursor:pointer;
 }
@@ -237,7 +239,8 @@ body 	{font-family: 'Yantramanav', Arial;}
 	position:relative;
 	padding:.5rem;
 	border-radius:2px;
-	transform:translateY(-250%);
+	transform:translateY(-50%);
+	opacity:0;
 }
 
 #modals .modal-background:target {
@@ -246,8 +249,13 @@ body 	{font-family: 'Yantramanav', Arial;}
 }
 
 #modals .modal-background:target .content {
-	transform:translateY(-50%);
+	opacity:1;
 	animation:showModal 1s;
+}
+
+#modals .modal_close-content:not(:target) .modal-background {
+	animation:showModal 1s reverse;
+	animation-delay:2s;
 }
 
 #modals .heading {
