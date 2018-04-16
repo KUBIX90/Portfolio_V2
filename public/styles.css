@@ -214,6 +214,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	width:100%;
 	background:rgba(0, 0, 0, .8);
 	visibility:hidden;
+	transition:all 250ms ease 250ms;
 }
 
 #modals .content {
@@ -235,8 +236,8 @@ body 	{font-family: 'Yantramanav', Arial;}
 
 #modals .modal-background:not(:target) {
     opacity:0;
-	transition:all 250ms ease 250ms;
-} 
+	transition:all 500ms ease 250ms;
+}
 
 #modals .modal-background:target .content 		{animation: showModal ease 750ms forwards;}
 #modals .modal-background:not(:target) .content {animation: hideModal ease 750ms forwards;}
