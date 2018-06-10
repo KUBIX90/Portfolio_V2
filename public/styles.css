@@ -217,7 +217,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 	height:100%;
 	width:100%;
 	background:rgba(0, 0, 0, .8);
-	visibility:hidden;
+	display: none;
 	transition:all 250ms ease 250ms;
 }
 
@@ -234,7 +234,7 @@ body 	{font-family: 'Yantramanav', Arial;}
 }
 
 #modals .modal-background:target {
-	visibility:visible;
+	display: block;
 	transition:opacity 500ms ease;
 }
 
