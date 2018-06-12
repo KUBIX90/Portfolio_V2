@@ -244,7 +244,6 @@ body 	{font-family: 'Yantramanav', Arial;}
 }
 
 #modals .modal-background:target .content 		{animation: showModal ease 750ms forwards;}
-#modals .modal-background:not(:target) .content {animation: hideModal ease 750ms forwards;}
 
 #modals .heading {
 	font-weight:400;
